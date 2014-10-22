@@ -7,6 +7,10 @@ layers {
   image_data_param {
     source: "examples/mnist/mnist_train_files_images_index.txt"
     batch_size: 64
+    is_color: false
+  }
+  transform_param {
+    scale: 0.00390625
   }
   include: { phase: TRAIN }
 }
@@ -18,6 +22,10 @@ layers {
   image_data_param {
     source: "examples/mnist/mnist_test_files_images_index.txt"
     batch_size: 64
+    is_color: false
+  }
+  transform_param {
+    scale: 0.00390625
   }
   include: { phase: TEST }
 }
